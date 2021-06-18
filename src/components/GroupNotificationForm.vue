@@ -3,7 +3,7 @@
     <div class="form-group">
       <label for="message-title">Titolo</label>
       <input
-        type="email"
+        type="text"
         class="form-control"
         id="message-title"
         aria-describedby="title-hint"
@@ -11,7 +11,8 @@
         v-model="title"
       />
       <small id="title-hint" class="form-text text-muted"
-        >E' possibile usare le keywords anche nel titolo.</small
+        >E' possibile utilizzare le keywords sia nel titolo che nel corpo della
+        notifica.</small
       >
     </div>
     <div class="form-group">
@@ -50,7 +51,7 @@ export default {
       const accessToken = await this.$auth.getTokenSilently();
       try {
         await this.$http.post(
-          "http://localhost:3100/messages/group",
+          "https://push-api.herokuapp.com/messages/group",
           {
             group: this.id,
             title: this.title,

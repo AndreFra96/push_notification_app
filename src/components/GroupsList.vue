@@ -62,11 +62,14 @@ export default {
   async created() {
     const accessToken = await this.$auth.getTokenSilently();
     try {
-      const { data } = await this.$http.get("http://localhost:3100/groups", {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const { data } = await this.$http.get(
+        "https://push-api.herokuapp.com/groups",
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
       this.groups = data["response"];
       this.loading = false;
     } catch (e) {

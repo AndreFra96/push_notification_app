@@ -8,7 +8,7 @@
     box-shadow: 0 1px 2px 0 #dfe3ec;
 }
 
-.navbar .router-link-exact-active {
+.navbar .router-link-active {
     color: #041433;
     border-bottom: 3px solid #0066f9
 }
@@ -48,13 +48,13 @@
     font-weight: 600
 }
 
-.nav-item.dropdown .router-link-exact-active {
+.nav-item.dropdown .router-link-active {
     border: 0
 }
 
 .nav-item.dropdown .dropdown-menu {
     box-shadow: 0 0 4px 0 #b3bac7;
-    /* z index corrispondente a z-index del breadcrumb +1 */
+    /* z index corrispondente a z-index di breadcrumb bootstrap +1 */
     z-index: 1021;
 }
 
@@ -112,7 +112,7 @@
     .nav-item .nav-link {
         padding: 0 0 0 16px
     }
-    .nav-item .nav-link.router-link-exact-active {
+    .nav-item .nav-link .router-link-active {
         border-bottom: 0;
         border-left: 3px solid #0066f9;
         padding-left: 13px!important;
