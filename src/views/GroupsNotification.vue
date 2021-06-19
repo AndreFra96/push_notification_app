@@ -15,11 +15,13 @@
       invio.
     </p>
     <hr />
-    <label>Gruppo</label>
-    <GroupInfo :groupId="this.$route.params.id"></GroupInfo>
-    <GroupNotificationForm
-      :groupId="this.$route.params.id"
-    ></GroupNotificationForm>
+    <div class="card shadow p-4">
+      <label>Gruppo</label>
+      <GroupInfo :groupId="this.$route.params.id"></GroupInfo>
+      <GroupNotificationForm
+        :groupId="this.$route.params.id"
+      ></GroupNotificationForm>
+    </div>
   </div>
 </template>
 

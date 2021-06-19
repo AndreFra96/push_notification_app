@@ -1,5 +1,5 @@
 <template>
-  <form id="GroupNotificationForm" style="margin-bottom: 4rem">
+  <form id="GroupNotificationForm">
     <div class="form-group">
       <label for="message-title">Titolo</label>
       <input

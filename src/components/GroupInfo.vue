@@ -1,5 +1,5 @@
 <template>
-  <div id="GroupsInfo" class="alert alert-secondary fade show" role="alert">
+  <div id="GroupsInfo" class="card p-2 mb-2">
     <div v-if="loading" class="text-center">
       <div class="spinner-grow text-secondary" role="status">
         <span class="sr-only">Loading...</span>
@@ -7,7 +7,7 @@
     </div>
     <table v-else>
       <tr>
-        <td>Titolo:</td>
+        <td class="align-top">Titolo:</td>
         <td>
           <b>{{ title }}</b>
         </td>
@@ -17,7 +17,7 @@
         <td>{{ description }}</td>
       </tr>
       <tr>
-        <td>Keywords:</td>
+        <td class="align-top">Keywords:</td>
         <td>
           <span v-for="keyword of keywords" :key="keyword">
             {{ keyword }},
@@ -25,7 +25,7 @@
         </td>
       </tr>
       <tr>
-        <td>Destinatari:</td>
+        <td class="align-top">Destinatari:</td>
         <td>{{ destinatari }} dispositivi</td>
       </tr>
     </table>

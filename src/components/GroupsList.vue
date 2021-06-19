@@ -1,5 +1,5 @@
 <template>
-  <div id="GroupsList">
+  <div id="GroupsList" :key="componentKey">
     <input
       type="search"
       v-model="search"
@@ -23,7 +23,11 @@
         <div class="card-body d-flex flex-column justify-content-between">
           <div class="d-flex justify-content-between">
             <h5 class="card-title">{{ group.title }}</h5>
-            <font-awesome-icon icon="times" class="text-danger pointer">
+            <font-awesome-icon
+              icon="times"
+              @click="deleteGroup(group.id)"
+              class="text-danger pointer"
+            >
             </font-awesome-icon>
           </div>
 
@@ -57,6 +61,7 @@ export default {
       loading: true,
       search: "",
       error: null,
+      componentKey: 0,
     };
   },
   async created() {
@@ -84,6 +89,41 @@ export default {
       return this.groups.filter((group) => {
         return group.title.toLowerCase().includes(this.search.toLowerCase());
       });
+    },
+  },
+  methods: {
+    async deleteGroup(id) {
+      if (
+        confirm(
+          "Cancellare il gruppo?\nNon sarà possibile recuperarlo in seguito"
+        )
+      ) {
+        const accessToken = await this.$auth.getTokenSilently();
+        try {
+          await this.$http.delete(
+            "https://push-api.herokuapp.com/groups/" + id,
+            {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            }
+          );
+        } catch (e) {
+          console.error(e);
+          //   this.apiMessage = `Error: the server responded with '${e.response.status}: ${e.response.statusText}'`;
+        }
+        for (var key in this.groups) {
+          if (this.groups[key]["id"] === id) {
+            delete this.groups[key];
+            this.forceRerender();
+          }
+        }
+        this.search = " ";
+        this.search = "";
+      }
+    },
+    forceRerender() {
+      this.componentKey += 1;
     },
   },
 };

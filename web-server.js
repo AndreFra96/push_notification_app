@@ -37,7 +37,6 @@ app.get("/api/external", checkJwt, (req, res) => {
   });
 });
 
-
 if (process.env.NODE_ENV === "production") {
   app.use((_, res) => {
     res.sendFile(join(__dirname, "dist", "index.html"));

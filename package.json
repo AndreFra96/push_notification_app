@@ -7,7 +7,8 @@
     "serve": "npm-run-all --parallel serve-vue backend-dev",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "backend-dev": "nodemon bin/www"
+    "backend-dev": "nodemon bin/www",
+    "start": "node bin/www"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.5",
@@ -24,6 +25,8 @@
     "highlight.js": "^10.4.1",
     "jwks-rsa": "^1.11.0",
     "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "serve-static": "^1.14.1",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
     "vuex": "^3.6.0"

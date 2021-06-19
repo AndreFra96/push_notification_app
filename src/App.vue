@@ -7,7 +7,7 @@
         <router-view />
       </div>
     </div>
-    <footer class="bg-light text-center p-3">
+    <footer class="bg-light text-center p-3 mt-4">
       <div class="logo"></div>
       <p>
         Design basato sul progetto di prova fornito da

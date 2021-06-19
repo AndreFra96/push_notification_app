@@ -8,7 +8,14 @@
       ]"
     ></Breadcrumb>
     <h1>Modifica Gruppo</h1>
-    <GroupEditForm :groupId="this.$route.params.id"></GroupEditForm>
+    <p>
+      Modifica titolo, descrizione e query del gruppo, premi salva modifiche per
+      rendere effettivo il cambiamento.
+    </p>
+    <hr />
+    <div class="card shadow p-4">
+      <GroupEditForm :groupId="this.$route.params.id"></GroupEditForm>
+    </div>
   </div>
 </template>
 

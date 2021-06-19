@@ -1,12 +1,11 @@
 <template>
-  <form id="GroupEditForm" style="margin-bottom: 4rem">
+  <form id="GroupEditForm">
     <div class="form-group">
       <label for="group-title">Titolo</label>
       <input
         type="text"
         class="form-control"
         id="group-title"
-        placeholder="Titolo del gruppo"
         v-model="title"
       />
     </div>
@@ -16,7 +15,6 @@
         type="text"
         class="form-control"
         id="group-description"
-        placeholder="Descrizione del gruppo"
         v-model="description"
       >
       </textarea>
@@ -27,7 +25,6 @@
         type="text"
         class="form-control"
         id="group-query"
-        placeholder="Query del gruppo"
         v-model="query"
       >
       </textarea>
