@@ -312,3 +312,7 @@ a {
 .pointer {
     cursor: pointer !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}

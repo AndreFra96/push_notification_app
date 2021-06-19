@@ -1,5 +1,5 @@
 <template>
-  <div class="next-steps">
+  <div id="more" class="next-steps">
     <h2 class="my-5 text-center">Scopri di più</h2>
 
     <div class="row">
