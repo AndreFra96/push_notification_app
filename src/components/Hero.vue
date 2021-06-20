@@ -7,12 +7,12 @@
 
     <p v-if="$auth.isAuthenticated" class="lead">
       Inizia subito ad utilizzare il servizio, oppure scopri le API per
-      integrare il servizio all'interno della tua applicazione
+      integrarlo all'interno della tua applicazione
       <br />
       <router-link
         to="/groups"
         class="btn btn-primary rounded m-3 p-3 text-white pointer"
-        >Notifica di Gruppo</router-link
+        >Notifica di gruppo</router-link
       >
       <router-link
         to="/notification"
@@ -32,9 +32,13 @@
       Invia notifiche push personalizzate agli utenti della tua applicazione
       utilizzando i dati presenti in un database SQL
       <br />
-      <button class="btn btn-primary rounded p-3 m-3" @click="login">
+      <a
+        href="#"
+        @click="login"
+        class="btn btn-primary rounded pointer p-3 m-3 text-white"
+      >
         Login
-      </button>
+      </a>
       <a
         href="#more"
         class="btn btn-primary rounded pointer p-3 m-3 text-white"

@@ -5,6 +5,7 @@ import Profile from "../views/Profile.vue";
 import Groups from "../views/Groups.vue";
 import GroupsIndex from "../views/GroupsIndex.vue";
 import GroupsEdit from "../views/GroupsEdit.vue";
+import GroupsCreate from "../views/GroupsCreate.vue";
 import GroupsNotification from "../views/GroupsNotification.vue";
 
 
@@ -38,6 +39,11 @@ const router = new Router({
     {
       path: "/groups/list",
       component: Groups,
+      beforeEnter: authGuard
+    },
+    {
+      path: "/groups/create",
+      component: GroupsCreate,
       beforeEnter: authGuard
     },
     {
