@@ -87,7 +87,7 @@ export default {
   computed: {
     filteredList() {
       return this.tokens.filter((token) => {
-        return token.id.toLowerCase().includes(this.search.toLowerCase());
+        return token.id == parseInt(this.search);
       });
     },
   },
