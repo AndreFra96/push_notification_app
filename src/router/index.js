@@ -9,7 +9,10 @@ import GroupsCreate from "../views/GroupsCreate.vue";
 import GroupsNotification from "../views/GroupsNotification.vue";
 
 
-import Notifications from "../views/Notifications.vue";
+import NotificationIndex from "../views/NotificationIndex.vue";
+import NotificationDirect from "../views/NotificationDirect.vue";
+
+
 
 
 import { authGuard } from "../auth";
@@ -58,7 +61,12 @@ const router = new Router({
     },
     {
       path: "/notification",
-      component: Notifications,
+      component: NotificationIndex,
+      beforeEnter: authGuard
+    },
+    {
+      path: "/notification/direct",
+      component: NotificationDirect,
       beforeEnter: authGuard
     }
   ]

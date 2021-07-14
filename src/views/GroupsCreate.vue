@@ -11,6 +11,7 @@
     </p>
     <hr />
     <div class="card shadow p-4">
+      <DatabaseSchemaModal class="text-right"></DatabaseSchemaModal>
       <GroupCreateForm></GroupCreateForm>
     </div>
   </div>
@@ -19,12 +20,14 @@
 <script>
 import Breadcrumb from "../components/Breadcrumb";
 import GroupCreateForm from "../components/GroupCreateForm";
+import DatabaseSchemaModal from "../components/DatabaseSchemaModal";
 
 export default {
   name: "groups-create",
   components: {
     Breadcrumb,
     GroupCreateForm,
+    DatabaseSchemaModal,
   },
 };
 </script>

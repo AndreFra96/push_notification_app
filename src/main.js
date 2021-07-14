@@ -8,7 +8,7 @@ import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/github.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faLink, faUser, faPowerOff, faTrash, faChevronRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faUser, faPowerOff, faTrash, faChevronRight, faTimes, faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import { domain, clientId, audience } from "../auth_config.json";
@@ -32,7 +32,7 @@ Vue.use(Auth0Plugin, {
 
 Vue.use(Axios);
 
-library.add(faLink, faUser, faPowerOff, faTrash, faChevronRight, faTimes);
+library.add(faLink, faUser, faPowerOff, faTrash, faChevronRight, faTimes, faDatabase);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
