@@ -11,6 +11,8 @@ import GroupsNotification from "../views/GroupsNotification.vue";
 
 import NotificationIndex from "../views/NotificationIndex.vue";
 import NotificationDirect from "../views/NotificationDirect.vue";
+import Tokens from "../views/Tokens.vue";
+
 
 
 
@@ -67,6 +69,11 @@ const router = new Router({
     {
       path: "/notification/direct",
       component: NotificationDirect,
+      beforeEnter: authGuard
+    },
+    {
+      path: "/tokens/list",
+      component: Tokens,
       beforeEnter: authGuard
     }
   ]
