@@ -59,7 +59,7 @@ export default {
     return {
       tokens: [],
       loading: true,
-      search: "",
+      search: 0,
       error: null,
       componentKey: 0,
     };
@@ -87,7 +87,7 @@ export default {
   computed: {
     filteredList() {
       return this.tokens.filter((token) => {
-        return token.id == parseInt(this.search);
+        return this.search == 0 ? true : token.id == parseInt(this.search);
       });
     },
   },
