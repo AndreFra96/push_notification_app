@@ -39,7 +39,7 @@
               >Modifica</router-link
             >
             <router-link
-              :to="'/tokens/notification/' + token.id"
+              :to="'/notification/direct/' + token.id"
               class="card-link btn btn-primary btn-sm"
               >Invia Notifica
               <font-awesome-icon icon="chevron-right" class="ml-1">
@@ -87,9 +87,7 @@ export default {
   computed: {
     filteredList() {
       return this.tokens.filter((token) => {
-        return token.customer_id_trace
-          .toLowerCase()
-          .includes(this.search.toLowerCase());
+        return token.id.toLowerCase().includes(this.search.toLowerCase());
       });
     },
   },
