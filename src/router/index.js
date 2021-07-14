@@ -67,7 +67,7 @@ const router = new Router({
       beforeEnter: authGuard
     },
     {
-      path: "/notification/direct",
+      path: "/notification/direct/:token",
       component: NotificationDirect,
       beforeEnter: authGuard
     },

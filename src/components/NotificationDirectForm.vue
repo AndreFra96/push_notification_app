@@ -55,7 +55,7 @@ export default {
   },
   data: function () {
     return {
-      token: "",
+      token: this.$route.params.token,
       title: "",
       body: "",
       alert: {

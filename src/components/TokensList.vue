@@ -35,11 +35,9 @@
             {{ token.token }}
           </p>
           <div class="d-flex justify-content-between">
-            <router-link :to="'/tokens/edit/' + token.id" class="card-link"
-              >Modifica</router-link
-            >
+            <div></div>
             <router-link
-              :to="'/notification/direct/' + token.id"
+              :to="'/notification/direct/' + token.token"
               class="card-link btn btn-primary btn-sm"
               >Invia Notifica
               <font-awesome-icon icon="chevron-right" class="ml-1">
